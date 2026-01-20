@@ -1,0 +1,8 @@
+{
+  "name": "data-viz-dashboard",
+  "version": "1.0.0",
+  "description": "Interactive data visualization dashboard with D3.js and Chart.js",
+  "scripts": {
+    "start": "python3 -m http.server 8090"
+  }
+}

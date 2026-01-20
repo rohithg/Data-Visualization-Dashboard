@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analytics Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.0.0/dist/chart.umd.min.js"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dashboard">
+        <header class="dashboard-header">
+            <h1>📊 Analytics Dashboard</h1>
+            <div class="date-range">
+                <select id="dateRange">
+                    <option value="7">Last 7 days</option>
+                    <option value="30" selected>Last 30 days</option>
+                    <option value="90">Last 90 days</option>
+                </select>
+            </div>
+        </header>
+
+        <div class="metrics-grid">
+            <div class="metric-card">
+                <div class="metric-label">Total Revenue</div>
+                <div class="metric-value" id="totalRevenue">$0</div>
+                <div class="metric-change positive">+12.5%</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-label">Active Users</div>
+                <div class="metric-value" id="activeUsers">0</div>
+                <div class="metric-change positive">+8.2%</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-label">Conversion Rate</div>
+                <div class="metric-value" id="conversionRate">0%</div>
+                <div class="metric-change negative">-2.1%</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-label">Avg. Order Value</div>
+                <div class="metric-value" id="avgOrder">$0</div>
+                <div class="metric-change positive">+5.7%</div>
+            </div>
+        </div>
+
+        <div class="charts-grid">
+            <div class="chart-card">
+                <h3>Revenue Over Time</h3>
+                <canvas id="revenueChart"></canvas>
+            </div>
+
+            <div class="chart-card">
+                <h3>User Distribution</h3>
+                <canvas id="userChart"></canvas>
+            </div>
+
+            <div class="chart-card">
+                <h3>Product Categories</h3>
+                <canvas id="categoryChart"></canvas>
+            </div>
+
+            <div class="chart-card">
+                <h3>Traffic Sources</h3>
+                <div id="trafficChart"></div>
+            </div>
+
+            <div class="chart-card large">
+                <h3>Sales by Region</h3>
+                <div id="mapChart"></div>
+            </div>
+
+            <div class="chart-card">
+                <h3>Top Products</h3>
+                <div id="topProducts"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
